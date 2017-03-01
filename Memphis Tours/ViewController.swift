@@ -50,8 +50,10 @@ extension UIFont {
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
+        
         
         let registerButton = UIButton(type: .custom)
         registerButton.setTitle("REGISTER", for: .normal)
@@ -59,23 +61,53 @@ class ViewController: UIViewController {
         registerButton.frame = CGRect(x: 0, y: 608, width: 187.5, height: 59)
         registerButton.clipsToBounds = true
         registerButton.backgroundColor = UIColor.miBlueberryTwo
+        registerButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        registerButton.tag = 1
         self.view.addSubview(registerButton)
-        
+
         let loginButton = UIButton(type: .custom)
         loginButton.setTitle("LOGIN", for: .normal)
         loginButton.titleLabel!.font = UIFont.miTextStyle2Font()
         loginButton.frame = CGRect(x: 187.5, y: 608, width: 187.5, height: 59)
         loginButton.clipsToBounds = true
         loginButton.backgroundColor = UIColor.miBlueberryTwo
+        loginButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        loginButton.tag = 2
         self.view.addSubview(loginButton)
         
-        let skipLabel = UILabel()
-        skipLabel.text = "SKIP"
-        skipLabel.font = UIFont.miTextStyleFont()
-        skipLabel.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
-        skipLabel.clipsToBounds = true
-        self.view.addSubview(skipLabel)
+//        let skipLabel = UILabel()
+//        skipLabel.text = "SKIP"
+//        skipLabel.font = UIFont.miTextStyleFont()
+//        skipLabel.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
+//        skipLabel.clipsToBounds = true
+//        self.view.addSubview(skipLabel)
+//        
+        let skipButton = UIButton(type: .custom)
+        skipButton.titleLabel?.textColor = UIColor.black
+        skipButton.setTitle("SKIP", for: .normal)
+        skipButton.titleLabel?.font = UIFont.miTextStyleFont()
+        skipButton.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
+        skipButton.clipsToBounds = true
+        self.view.addSubview(skipButton)
+        
+//        let locationPermissionButton = UIButton()
+//        locationPermissionButton.setTitle("LOCATION PERMISSION", for: .normal)
+//        locationPermissionButton.titleLabel?.font = UIFont.miTextStyle3Font()
+//        locationPermissionButton.frame = CGRect(x: 87.5, y: 556, width: 200, height: 45)
+//        locationPermissionButton.layer.cornerRadius = 25
+//        locationPermissionButton.clipsToBounds = true
+//        locationPermissionButton.backgroundColor = UIColor.miBlueberry
+//        self.view.addSubview(locationPermissionButton)
+        
+        
 
+    }
+    
+    func buttonAction(sender: UIButton!) {
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1 || btnsendtag.tag == 2 {
+            print("custom buttons")
+        }
     }
 
     override func didReceiveMemoryWarning() {
