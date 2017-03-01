@@ -31,24 +31,29 @@ extension UIColor {
 // Text styles
 
 extension UIFont {
+    
     class func miTextStyleFont() -> UIFont? {
+        return UIFont(name: ".SFNSDisplay-Bold", size: 20.0)
+    }
+    
+    class func miTextStyle2Font() -> UIFont? {
         return UIFont(name: ".SFNSText-Bold", size: 25.0)
     }
     
     class func miTextStyle3Font() -> UIFont? {
-        return UIFont(name: ".SFNSText-Bold", size: 25.0)
-    }
-    
-    class func miTextStyle2Font() -> UIFont? {
         return UIFont(name: ".SFNSText-Light", size: 25.0)
     }
     
     class func miTextStyle4Font() -> UIFont? {
-        return UIFont(name: ".SFNSText-Light", size: 25.0)
+        return UIFont(name: ".SFNSDisplay-Bold", size: 20.0)
     }
     
     class func miTextStyle5Font() -> UIFont? {
-        return UIFont(name: ".SFNSDisplay-Bold", size: 20.0)
+        return UIFont(name: ".SFNSDisplay-Bold", size: 17.5)
+    }
+
+    class func miTextStyle6Font() -> UIFont? {
+        return UIFont(name: ".SF NS Display", size: 15.0)
     }
 }
 
@@ -60,18 +65,26 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         let registerButton = UIButton(type: .custom)
-        registerButton.setTitle("Register", for: .normal)
+        registerButton.setTitle("REGISTER", for: .normal)
         registerButton.frame = CGRect(x: 0, y: 608, width: 187.5, height: 59)
         registerButton.clipsToBounds = true
         registerButton.backgroundColor = UIColor.miBlueberryTwo
-        view.addSubview(registerButton)
-//        
-//        let loginButton = UIButton(type: .custom)
-//        loginButton.setTitle("Register", for: .normal)
-//        loginButton.frame = CGRect(x: 0, y: 608, width: 187.5, height: 59)
-//        loginButton.clipsToBounds = true
-//        loginButton.backgroundColor = UIColor.miBlueberryTwo
-//        loginButton.addSubview(loginButton)
+        self.view.addSubview(registerButton)
+        
+        let loginButton = UIButton(type: .custom)
+        loginButton.setTitle("LOGIN", for: .normal)
+        loginButton.titleLabel?.font = UIFont.miTextStyle5Font()
+        loginButton.frame = CGRect(x: 187.5, y: 608, width: 187.5, height: 59)
+        loginButton.clipsToBounds = true
+        loginButton.backgroundColor = UIColor.miBlueberryTwo
+        self.view.addSubview(loginButton)
+        
+        let skipLabel = UILabel()
+        skipLabel.text = "SKIP"
+        skipLabel.font = UIFont.miTextStyle6Font()
+        skipLabel.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
+        skipLabel.clipsToBounds = true
+        self.view.addSubview(skipLabel)
 
     }
 
