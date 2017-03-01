@@ -65,13 +65,13 @@ class ViewController: UIViewController {
         registerButton.clipsToBounds = true
         registerButton.backgroundColor = UIColor.miBlueberryTwo
         view.addSubview(registerButton)
-        
-        let loginButton = UIButton(type: .custom)
-        loginButton.setTitle("Register", for: .normal)
-        loginButton.frame = CGRect(x: 0, y: 608, width: 187.5, height: 59)
-        loginButton.clipsToBounds = true
-        loginButton.backgroundColor = UIColor.miBlueberryTwo
-        loginButton.addSubview(button)
+//        
+//        let loginButton = UIButton(type: .custom)
+//        loginButton.setTitle("Register", for: .normal)
+//        loginButton.frame = CGRect(x: 0, y: 608, width: 187.5, height: 59)
+//        loginButton.clipsToBounds = true
+//        loginButton.backgroundColor = UIColor.miBlueberryTwo
+//        loginButton.addSubview(loginButton)
 
     }
 
