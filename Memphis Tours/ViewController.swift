@@ -75,38 +75,26 @@ class ViewController: UIViewController {
         loginButton.tag = 2
         self.view.addSubview(loginButton)
         
-//        let skipLabel = UILabel()
-//        skipLabel.text = "SKIP"
-//        skipLabel.font = UIFont.miTextStyleFont()
-//        skipLabel.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
-//        skipLabel.clipsToBounds = true
-//        self.view.addSubview(skipLabel)
-//        
         let skipButton = UIButton(type: .custom)
-        skipButton.titleLabel?.textColor = UIColor.black
         skipButton.setTitle("SKIP", for: .normal)
-        skipButton.titleLabel?.font = UIFont.miTextStyleFont()
+        skipButton.setTitleColor(UIColor.white, for: .normal)
         skipButton.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
         skipButton.clipsToBounds = true
         self.view.addSubview(skipButton)
         
-//        let locationPermissionButton = UIButton()
-//        locationPermissionButton.setTitle("LOCATION PERMISSION", for: .normal)
-//        locationPermissionButton.titleLabel?.font = UIFont.miTextStyle3Font()
-//        locationPermissionButton.frame = CGRect(x: 87.5, y: 556, width: 200, height: 45)
-//        locationPermissionButton.layer.cornerRadius = 25
-//        locationPermissionButton.clipsToBounds = true
-//        locationPermissionButton.backgroundColor = UIColor.miBlueberry
-//        self.view.addSubview(locationPermissionButton)
+      
         
         
 
     }
     
     func buttonAction(sender: UIButton!) {
-        var btnsendtag: UIButton = sender
+        let btnsendtag: UIButton = sender
         if btnsendtag.tag == 1 || btnsendtag.tag == 2 {
-            print("custom buttons")
+            let locationViewController: LocationViewController = LocationViewController()
+            let controller = storyboard?.instantiateViewController(withIdentifier: "location") as! LocationViewController
+            present(controller, animated : true, completion: nil)
+
         }
     }
 
