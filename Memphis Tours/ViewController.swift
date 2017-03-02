@@ -33,15 +33,15 @@ extension UIColor {
 extension UIFont {
     
     class func miTextStyleFont() -> UIFont? {
-        return UIFont(name: ".SF NS Display", size: 15.0)
+        return UIFont(name: "SanFranciscoDisplay-Regular", size: 15.0)
     }
 
     class func miTextStyle2Font() -> UIFont? {
-        return UIFont(name: ".SFNSDisplay-Bold", size: 17.5)
+        return UIFont(name: "SanFranciscoDisplay-Bold", size: 17.5)
     }
     
     class func miTextStyle3Font() -> UIFont? {
-        return UIFont(name: ".SFNSDisplay-Bold", size: 15.0)
+        return UIFont(name: "SanFranciscoDisplay-Bold", size: 15.0)
     }
 }
 
@@ -53,6 +53,18 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
+        
+        let nameLabel = UILabel()
+        nameLabel.text = "MEMPHIS"
+        nameLabel.frame = CGRect(x: 39.5, y: 32, width: 163, height: 59)
+        nameLabel.clipsToBounds = true
+        self.view.addSubview(nameLabel)
+        
+        let nameLabel2 = UILabel()
+        nameLabel2.text = "TOURS"
+        nameLabel2.frame = CGRect(x: 39.5, y: 61.5, width: 163, height: 29.5)
+        nameLabel2.clipsToBounds = true
+        self.view.addSubview(nameLabel2)
         
         
         let registerButton = UIButton(type: .custom)
