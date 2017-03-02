@@ -51,6 +51,15 @@ extension UIFont {
     class func miTextStyle5Font() -> UIFont? {
         return UIFont(name: "SanFranciscoDisplay-Light", size: 25.0)
     }
+    
+    class func miTextStyle6Font() -> UIFont? {
+        return UIFont(name: "SanFranciscoDisplay-Light", size: 20.0)
+    }
+    
+    class func miTextStyle7Font() -> UIFont? {
+        return UIFont(name: "SanFranciscoDisplay-Bold", size: 20.0)
+    }
+
 }
 
 
@@ -60,10 +69,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
+//        self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
+        // MEMPHIS TOURS label
         
         let nameLabel = UILabel()
         nameLabel.text = "MEMPHIS"
+        nameLabel.textColor = UIColor.white
         nameLabel.font = UIFont.miTextStyle4Font()
         nameLabel.frame = CGRect(x: 39.5, y: 32, width: 163, height: 29.5)
         nameLabel.clipsToBounds = true
@@ -71,11 +84,13 @@ class ViewController: UIViewController {
         
         let nameLabel2 = UILabel()
         nameLabel2.text = "TOURS"
+        nameLabel2.textColor = UIColor.white
         nameLabel2.font = UIFont.miTextStyle5Font()
         nameLabel2.frame = CGRect(x: 39.5, y: 61.5, width: 163, height: 29.5)
         nameLabel2.clipsToBounds = true
         self.view.addSubview(nameLabel2)
         
+        // REGISTER and LOGIN button
         
         let registerButton = UIButton(type: .custom)
         registerButton.setTitle("REGISTER", for: .normal)
@@ -97,6 +112,8 @@ class ViewController: UIViewController {
         loginButton.tag = 2
         self.view.addSubview(loginButton)
         
+        // SKIP button
+        
         let skipButton = UIButton(type: .custom)
         skipButton.setTitle("SKIP", for: .normal)
         skipButton.setTitleColor(UIColor.white, for: .normal)
@@ -104,11 +121,9 @@ class ViewController: UIViewController {
         skipButton.clipsToBounds = true
         self.view.addSubview(skipButton)
         
-      
-        
-        
-
     }
+    
+    // REGISTER and LOGIN button actions
     
     func buttonAction(sender: UIButton!) {
         let btnsendtag: UIButton = sender

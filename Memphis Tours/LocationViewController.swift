@@ -12,16 +12,42 @@ import CoreLocation
 class LocationViewController: UIViewController, CLLocationManagerDelegate{
     
     var locationManager: CLLocationManager!
+    var customString = "Let's help you discover"
+    var customMutableString = NSMutableAttributedString()
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
         self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
+        
+        // Custom string to bold part of the label text
+        
+        customMutableString = NSMutableAttributedString(
+            string : customString,
+            attributes : [NSFontAttributeName: UIFont.miTextStyle6Font()]
+        )
+        customMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location:0, length: 23))
+        customMutableString.addAttribute(NSFontAttributeName, value: UIFont.miTextStyle7Font(), range: NSRange(location:15, length: 8))
+        
+        let customStringLabel = UILabel()
+        customStringLabel.attributedText = customMutableString
+        customStringLabel.textAlignment = NSTextAlignment.center
+        customStringLabel.frame = CGRect(x: 52.5, y: 248, width: 270, height: 23.5)
+        self.view.addSubview(customStringLabel)
+        
+        // Rest of the string
+        
+        let customStringLabel2 = UILabel()
+        customStringLabel2.text = "things around you"
+        customStringLabel2.textAlignment = NSTextAlignment.center
+        customStringLabel2.frame = CGRect(x: 52.5, y: 271.5, width: 270, height: 23.5)
+        customStringLabel2.font = UIFont.miTextStyle6Font()
+        customStringLabel2.textColor = UIColor.white
+        customStringLabel2.clipsToBounds = true
+        self.view.addSubview(customStringLabel2)
+        
+        // Location Permission button
 
         let locationPermissionButton = UIButton()
         locationPermissionButton.setTitle("LOCATION PERMISSION", for: .normal)
@@ -33,6 +59,8 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate{
         locationPermissionButton.addTarget(self, action: #selector(buttonAction2), for: .touchUpInside)
         locationPermissionButton.tag = 3
         self.view.addSubview(locationPermissionButton)
+        
+        // Skip button
         
         let skipButton = UIButton(type: .custom)
         skipButton.setTitle("SKIP", for: .normal)
@@ -48,11 +76,15 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    // Action for Location Permission Button .. Still not working
+    
     func buttonAction2(sender: UIButton){
         let btnsendtag: UIButton = sender
         if btnsendtag.tag == 3 {
             print("hi")
-            
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
         }
     }
 
