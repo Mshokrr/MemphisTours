@@ -43,6 +43,14 @@ extension UIFont {
     class func miTextStyle3Font() -> UIFont? {
         return UIFont(name: "SanFranciscoDisplay-Bold", size: 15.0)
     }
+    
+    class func miTextStyle4Font() -> UIFont? {
+        return UIFont(name: "SanFranciscoDisplay-Bold", size: 25.0)
+    }
+    
+    class func miTextStyle5Font() -> UIFont? {
+        return UIFont(name: "SanFranciscoDisplay-Light", size: 25.0)
+    }
 }
 
 
@@ -56,12 +64,14 @@ class ViewController: UIViewController {
         
         let nameLabel = UILabel()
         nameLabel.text = "MEMPHIS"
-        nameLabel.frame = CGRect(x: 39.5, y: 32, width: 163, height: 59)
+        nameLabel.font = UIFont.miTextStyle4Font()
+        nameLabel.frame = CGRect(x: 39.5, y: 32, width: 163, height: 29.5)
         nameLabel.clipsToBounds = true
         self.view.addSubview(nameLabel)
         
         let nameLabel2 = UILabel()
         nameLabel2.text = "TOURS"
+        nameLabel2.font = UIFont.miTextStyle5Font()
         nameLabel2.frame = CGRect(x: 39.5, y: 61.5, width: 163, height: 29.5)
         nameLabel2.clipsToBounds = true
         self.view.addSubview(nameLabel2)
