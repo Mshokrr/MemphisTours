@@ -123,7 +123,7 @@ class ViewController: UIViewController {
         
     }
     
-    // REGISTER and LOGIN button actions
+    // REGISTER and LOGIN buttons actions
     
     func buttonAction(sender: UIButton!) {
         let btnsendtag: UIButton = sender
