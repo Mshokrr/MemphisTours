@@ -19,7 +19,13 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate{
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "worldMapBg.jpg")!)
+        self.view.backgroundColor?.withAlphaComponent(0.5)
+        
+        let worldMap = UILabel()
+        worldMap.backgroundColor = UIColor(patternImage: UIImage(named: "worldMap.png")!)
+        worldMap.frame = CGRect(x: 29.4, y: 116, width: 316.1, height: 111.4)
+        self.view.addSubview(worldMap)
         
         // Custom string to bold part of the label text
         

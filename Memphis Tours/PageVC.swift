@@ -1,11 +1,12 @@
 //
-//  ViewController.swift
+//  PageVC.swift
 //  Memphis Tours
 //
-//  Created by Mohamed Shokr on 2/28/17.
+//  Created by Mohamed Shokr on 3/3/17.
 //  Copyright © 2017 Mohamed Shokr. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 // Color Pallete
@@ -35,7 +36,7 @@ extension UIFont {
     class func miTextStyleFont() -> UIFont? {
         return UIFont(name: "SanFranciscoDisplay-Regular", size: 15.0)
     }
-
+    
     class func miTextStyle2Font() -> UIFont? {
         return UIFont(name: "SanFranciscoDisplay-Bold", size: 17.5)
     }
@@ -59,18 +60,29 @@ extension UIFont {
     class func miTextStyle7Font() -> UIFont? {
         return UIFont(name: "SanFranciscoDisplay-Bold", size: 20.0)
     }
-
+    
 }
 
-
-
-class ViewController: UIViewController {
+class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    lazy var VCArr: [UIViewController] = {
+        return [self.VCInstance(name: "FirstVC"),
+                self.VCInstance(name: "SecondVC"),
+                self.VCInstance(name: "ThirdVC")]
+    }()
+    
+    private func VCInstance(name: String) -> UIViewController{
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
+    }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor(white: 100 / 255, alpha: 1.0)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        self.dataSource = self
+        self.delegate = self
+        
+        if let firstVC = VCArr.first{
+            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        }
         
         // MEMPHIS TOURS label
         
@@ -101,7 +113,7 @@ class ViewController: UIViewController {
         registerButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         registerButton.tag = 1
         self.view.addSubview(registerButton)
-
+        
         let loginButton = UIButton(type: .custom)
         loginButton.setTitle("LOGIN", for: .normal)
         loginButton.titleLabel!.font = UIFont.miTextStyle2Font()
@@ -120,7 +132,6 @@ class ViewController: UIViewController {
         skipButton.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
         skipButton.clipsToBounds = true
         self.view.addSubview(skipButton)
-        
     }
     
     // REGISTER and LOGIN buttons actions
@@ -131,15 +142,64 @@ class ViewController: UIViewController {
             let locationViewController: LocationViewController = LocationViewController()
             let controller = storyboard?.instantiateViewController(withIdentifier: "location") as! LocationViewController
             present(controller, animated : true, completion: nil)
-
+            
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        for view in self.view.subviews {
+            if view is UIScrollView {
+                view.frame = UIScreen.main.bounds
+            }
+            else if view is UIPageControl {
+                view.backgroundColor = UIColor.clear
+                view.frame.origin.y -= 95
+            }
+        }
     }
-
-
+    
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?{
+        guard let viewControllerIndex = VCArr.index(of: viewController) else {
+            return nil
+        }
+        let previousIndex = viewControllerIndex - 1
+        guard previousIndex >= 0 else {
+            return VCArr.last
+        }
+        guard VCArr.count > previousIndex else {
+            return nil
+        }
+        return VCArr[previousIndex]
+    }
+    
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?{
+        guard let viewControllerIndex = VCArr.index(of: viewController) else {
+            return nil
+        }
+        let nextIndex = viewControllerIndex + 1
+        guard nextIndex < VCArr.count else {
+            return VCArr.first
+        }
+        guard VCArr.count > nextIndex else {
+            return nil
+        }
+        return VCArr[nextIndex]
+        
+    }
+    
+    public func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return VCArr.count
+    }
+    
+    public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        guard let firstViewController = viewControllers?.first,
+            let firstViewControllerIndex = VCArr.index(of: firstViewController) else {
+                return 0
+        }
+        return firstViewControllerIndex
+    }
+    
+    
 }
-
