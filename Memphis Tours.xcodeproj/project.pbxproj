@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F15FEEF1E67A28400F4F785 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FEEE1E67A28400F4F785 /* LocationViewController.swift */; };
+		2F15FEEF1E67A28400F4F785 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FEEE1E67A28400F4F785 /* LocationVC.swift */; };
 		2F4117841E66237700F1FCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4117831E66237700F1FCC6 /* AppDelegate.swift */; };
-		2F4117861E66237700F1FCC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4117851E66237700F1FCC6 /* ViewController.swift */; };
 		2F4117891E66237700F1FCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4117871E66237700F1FCC6 /* Main.storyboard */; };
 		2F41178B1E66237700F1FCC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F41178A1E66237700F1FCC6 /* Assets.xcassets */; };
 		2F41178E1E66237700F1FCC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F41178C1E66237700F1FCC6 /* LaunchScreen.storyboard */; };
 		2F4117991E66237700F1FCC6 /* Memphis_ToursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4117981E66237700F1FCC6 /* Memphis_ToursTests.swift */; };
 		2F4117A41E66237800F1FCC6 /* Memphis_ToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4117A31E66237800F1FCC6 /* Memphis_ToursUITests.swift */; };
+		2F48D3721E69B7D3002F44F7 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D3711E69B7D3002F44F7 /* PageVC.swift */; };
+		2FD36DDA1E69BB190060668B /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD36DD91E69BB190060668B /* FirstVC.swift */; };
+		2FD36DDC1E69BB5A0060668B /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD36DDB1E69BB5A0060668B /* SecondVC.swift */; };
+		2FD36DDE1E69BB680060668B /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD36DDD1E69BB680060668B /* ThirdVC.swift */; };
 		2FE4C1A81E6843D700062A69 /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4C1911E6843D700062A69 /* SanFranciscoDisplay-Black.otf */; };
 		2FE4C1A91E6843D700062A69 /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4C1921E6843D700062A69 /* SanFranciscoDisplay-Bold.otf */; };
 		2FE4C1AA1E6843D700062A69 /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4C1931E6843D700062A69 /* SanFranciscoDisplay-Heavy.otf */; };
@@ -58,10 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F15FEEE1E67A28400F4F785 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		2F15FEEE1E67A28400F4F785 /* LocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		2F4117801E66237700F1FCC6 /* Memphis Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memphis Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4117831E66237700F1FCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F4117851E66237700F1FCC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F4117881E66237700F1FCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F41178A1E66237700F1FCC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F41178D1E66237700F1FCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,10 @@
 		2F41179F1E66237800F1FCC6 /* Memphis ToursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Memphis ToursUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4117A31E66237800F1FCC6 /* Memphis_ToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memphis_ToursUITests.swift; sourceTree = "<group>"; };
 		2F4117A51E66237800F1FCC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F48D3711E69B7D3002F44F7 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		2FD36DD91E69BB190060668B /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		2FD36DDB1E69BB5A0060668B /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		2FD36DDD1E69BB680060668B /* ThirdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
 		2FE4C1911E6843D700062A69 /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Black.otf"; path = "../../../../Downloads/San Francisco Font/Fonts/SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
 		2FE4C1921E6843D700062A69 /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Bold.otf"; path = "../../../../Downloads/San Francisco Font/Fonts/SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
 		2FE4C1931E6843D700062A69 /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Heavy.otf"; path = "../../../../Downloads/San Francisco Font/Fonts/SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
@@ -147,12 +153,15 @@
 			children = (
 				2FE4C1901E68438D00062A69 /* Fonts */,
 				2F4117831E66237700F1FCC6 /* AppDelegate.swift */,
-				2F4117851E66237700F1FCC6 /* ViewController.swift */,
 				2F4117871E66237700F1FCC6 /* Main.storyboard */,
 				2F41178A1E66237700F1FCC6 /* Assets.xcassets */,
 				2F41178C1E66237700F1FCC6 /* LaunchScreen.storyboard */,
 				2F41178F1E66237700F1FCC6 /* Info.plist */,
-				2F15FEEE1E67A28400F4F785 /* LocationViewController.swift */,
+				2F15FEEE1E67A28400F4F785 /* LocationVC.swift */,
+				2F48D3711E69B7D3002F44F7 /* PageVC.swift */,
+				2FD36DD91E69BB190060668B /* FirstVC.swift */,
+				2FD36DDB1E69BB5A0060668B /* SecondVC.swift */,
+				2FD36DDD1E69BB680060668B /* ThirdVC.swift */,
 			);
 			path = "Memphis Tours";
 			sourceTree = "<group>";
@@ -362,8 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F15FEEF1E67A28400F4F785 /* LocationViewController.swift in Sources */,
-				2F4117861E66237700F1FCC6 /* ViewController.swift in Sources */,
+				2FD36DDE1E69BB680060668B /* ThirdVC.swift in Sources */,
+				2F15FEEF1E67A28400F4F785 /* LocationVC.swift in Sources */,
+				2FD36DDC1E69BB5A0060668B /* SecondVC.swift in Sources */,
+				2FD36DDA1E69BB190060668B /* FirstVC.swift in Sources */,
+				2F48D3721E69B7D3002F44F7 /* PageVC.swift in Sources */,
 				2F4117841E66237700F1FCC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
