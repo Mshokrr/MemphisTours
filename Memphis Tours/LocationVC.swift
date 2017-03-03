@@ -19,7 +19,12 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "worldMapBg.jpg")!)
+        self.view.backgroundColor = UIColor.black
+        
+        let backgroundImg = UIImage(named: "worldMapBg.jpg")
+        let backgroundImgView = UIImageView(image: backgroundImg)
+        backgroundImgView.alpha = 0.5
+        self.view.addSubview(backgroundImgView)
         
         // World Map
         
@@ -57,7 +62,7 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
         // Location Permission button
 
         let locationPermissionButton = UIButton()
-        locationPermissionButton.setTitle("LOCATION PERMISSION", for: .normal)
+        locationPermissionButton.setTitle("Location permission", for: .normal)
         locationPermissionButton.titleLabel?.font = UIFont.miTextStyle3Font()
         locationPermissionButton.frame = CGRect(x: 87.5, y: 556, width: 200, height: 45)
         locationPermissionButton.layer.cornerRadius = 25
@@ -88,7 +93,6 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
     func buttonAction2(sender: UIButton){
         let btnsendtag: UIButton = sender
         if btnsendtag.tag == 3 {
-            print("hi")
             locationManager = CLLocationManager()
             locationManager.delegate = self
             locationManager.requestWhenInUseAuthorization()
