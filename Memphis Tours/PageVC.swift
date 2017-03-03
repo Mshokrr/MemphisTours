@@ -27,6 +27,19 @@ extension UIColor {
     class var miBluish: UIColor {
         return UIColor(red: 41.0 / 255.0, green: 111.0 / 255.0, blue: 193.0 / 255.0, alpha: 1.0)
     }
+    
+    class var miOrangish: UIColor {
+        return UIColor(red: 248.0 / 255.0, green: 125.0 / 255.0, blue: 87.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var miAppleGreen: UIColor {
+        return UIColor(red: 126.0 / 255.0, green: 211.0 / 255.0, blue: 33.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var miRedPink: UIColor {
+        return UIColor(red: 241.0 / 255.0, green: 64.0 / 255.0, blue: 75.0 / 255.0, alpha: 1.0)
+    }
+
 }
 
 // Text styles
@@ -59,6 +72,10 @@ extension UIFont {
     
     class func miTextStyle7Font() -> UIFont? {
         return UIFont(name: "SanFranciscoDisplay-Bold", size: 20.0)
+    }
+    
+    class func miTextStyle8Font() -> UIFont? {
+        return UIFont(name: "SanFranciscoDisplay-Regular", size: 30.0)
     }
     
 }
@@ -139,8 +156,8 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
     func buttonAction(sender: UIButton!) {
         let btnsendtag: UIButton = sender
         if btnsendtag.tag == 1 || btnsendtag.tag == 2 {
-            let locationViewController: LocationViewController = LocationViewController()
-            let controller = storyboard?.instantiateViewController(withIdentifier: "location") as! LocationViewController
+            let locationViewController: LocationVC = LocationVC()
+            let controller = storyboard?.instantiateViewController(withIdentifier: "location") as! LocationVC
             present(controller, animated : true, completion: nil)
             
         }

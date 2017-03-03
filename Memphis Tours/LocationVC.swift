@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class LocationViewController: UIViewController, CLLocationManagerDelegate{
+class LocationVC: UIViewController, CLLocationManagerDelegate{
     
     var locationManager: CLLocationManager!
     var customString = "Let's help you discover"
@@ -20,7 +20,8 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate{
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "worldMapBg.jpg")!)
-        self.view.backgroundColor?.withAlphaComponent(0.5)
+        
+        // World Map
         
         let worldMap = UILabel()
         worldMap.backgroundColor = UIColor(patternImage: UIImage(named: "worldMap.png")!)

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F15FEEF1E67A28400F4F785 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FEEE1E67A28400F4F785 /* LocationViewController.swift */; };
+		2F15FEEF1E67A28400F4F785 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FEEE1E67A28400F4F785 /* LocationVC.swift */; };
 		2F4117841E66237700F1FCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4117831E66237700F1FCC6 /* AppDelegate.swift */; };
 		2F4117891E66237700F1FCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4117871E66237700F1FCC6 /* Main.storyboard */; };
 		2F41178B1E66237700F1FCC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F41178A1E66237700F1FCC6 /* Assets.xcassets */; };
@@ -61,7 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F15FEEE1E67A28400F4F785 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		2F15FEEE1E67A28400F4F785 /* LocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		2F4117801E66237700F1FCC6 /* Memphis Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memphis Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4117831E66237700F1FCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4117881E66237700F1FCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 				2F41178A1E66237700F1FCC6 /* Assets.xcassets */,
 				2F41178C1E66237700F1FCC6 /* LaunchScreen.storyboard */,
 				2F41178F1E66237700F1FCC6 /* Info.plist */,
-				2F15FEEE1E67A28400F4F785 /* LocationViewController.swift */,
+				2F15FEEE1E67A28400F4F785 /* LocationVC.swift */,
 				2F48D3711E69B7D3002F44F7 /* PageVC.swift */,
 				2FD36DD91E69BB190060668B /* FirstVC.swift */,
 				2FD36DDB1E69BB5A0060668B /* SecondVC.swift */,
@@ -372,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD36DDE1E69BB680060668B /* ThirdVC.swift in Sources */,
-				2F15FEEF1E67A28400F4F785 /* LocationViewController.swift in Sources */,
+				2F15FEEF1E67A28400F4F785 /* LocationVC.swift in Sources */,
 				2FD36DDC1E69BB5A0060668B /* SecondVC.swift in Sources */,
 				2FD36DDA1E69BB190060668B /* FirstVC.swift in Sources */,
 				2F48D3721E69B7D3002F44F7 /* PageVC.swift in Sources */,
