@@ -10,6 +10,8 @@ import UIKit
 
 class SecondVC: UIViewController {
     
+    let (screenWidth, screenHeight) = UIScreen.main.applicationFrame.wh
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +33,7 @@ class SecondVC: UIViewController {
         let customStringLabel = UILabel()
         customStringLabel.attributedText = customMutableString
         // Had to change width for text wrapping and y for distance between labels
-        customStringLabel.frame = CGRect(x: 39.5, y: 285, width: 150, height: 110.8)
+        customStringLabel.frame = CGRect(x: screenWidth*0.105, y: screenHeight*0.427, width: 150, height: 110.8)
         customStringLabel.clipsToBounds = true
         customStringLabel.lineBreakMode = .byWordWrapping
         customStringLabel.numberOfLines = 0
@@ -39,7 +41,7 @@ class SecondVC: UIViewController {
         
         let descriptionLabel = UILabel()
         descriptionLabel.text = "Explore the world searching by location, interests and more on the go."
-        descriptionLabel.frame = CGRect(x: 39.5, y: 403.5, width: 182.9, height: 54)
+        descriptionLabel.frame = CGRect(x: screenWidth*0.105, y: screenHeight*0.63, width: 182.9, height: 54)
         descriptionLabel.clipsToBounds = true
         descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.numberOfLines = 0

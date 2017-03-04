@@ -11,9 +11,10 @@ import CoreLocation
 
 class LocationVC: UIViewController, CLLocationManagerDelegate{
     
+    let (screenWidth, screenHeight) = UIScreen.main.applicationFrame.wh
+    
     var locationManager: CLLocationManager!
-    var customString = "Let's help you discover"
-    var customMutableString = NSMutableAttributedString()
+    
 
     override func viewDidLoad() {
         
@@ -30,41 +31,35 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
         
         let worldMap = UILabel()
         worldMap.backgroundColor = UIColor(patternImage: UIImage(named: "worldMap.png")!)
-        worldMap.frame = CGRect(x: 29.4, y: 116, width: 316.1, height: 111.4)
+        worldMap.frame = CGRect(x: screenWidth*0.078, y: screenHeight*0.179, width: screenWidth*0.843, height: screenHeight*0.172)
         self.view.addSubview(worldMap)
         
         // Custom string to bold part of the label text
+        
+        var customString = "Let's help you discover things around you"
+        var customMutableString = NSMutableAttributedString()
         
         customMutableString = NSMutableAttributedString(
             string : customString,
             attributes : [NSFontAttributeName: UIFont.miTextStyle6Font()]
         )
-        customMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location:0, length: 23))
+        customMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location:0, length: 41))
         customMutableString.addAttribute(NSFontAttributeName, value: UIFont.miTextStyle7Font(), range: NSRange(location:15, length: 8))
         
         let customStringLabel = UILabel()
         customStringLabel.attributedText = customMutableString
         customStringLabel.textAlignment = NSTextAlignment.center
-        customStringLabel.frame = CGRect(x: 52.5, y: 248, width: 270, height: 23.5)
+        customStringLabel.lineBreakMode = .byWordWrapping
+        customStringLabel.numberOfLines = 0
+        customStringLabel.frame = CGRect(x: screenWidth*0.14, y: screenHeight*0.372, width: 260, height: 60)
         self.view.addSubview(customStringLabel)
-        
-        // Rest of the string
-        
-        let customStringLabel2 = UILabel()
-        customStringLabel2.text = "things around you"
-        customStringLabel2.textAlignment = NSTextAlignment.center
-        customStringLabel2.frame = CGRect(x: 52.5, y: 271.5, width: 270, height: 23.5)
-        customStringLabel2.font = UIFont.miTextStyle6Font()
-        customStringLabel2.textColor = UIColor.white
-        customStringLabel2.clipsToBounds = true
-        self.view.addSubview(customStringLabel2)
         
         // Location Permission button
 
         let locationPermissionButton = UIButton()
         locationPermissionButton.setTitle("Location permission", for: .normal)
         locationPermissionButton.titleLabel?.font = UIFont.miTextStyle3Font()
-        locationPermissionButton.frame = CGRect(x: 87.5, y: 556, width: 200, height: 45)
+        locationPermissionButton.frame = CGRect(x: screenWidth*0.233, y: screenHeight*0.833, width: screenWidth*0.533, height: screenHeight*0.067)
         locationPermissionButton.layer.cornerRadius = 25
         locationPermissionButton.clipsToBounds = true
         locationPermissionButton.backgroundColor = UIColor.miBlueberry
@@ -77,7 +72,7 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
         let skipButton = UIButton(type: .custom)
         skipButton.setTitle("SKIP", for: .normal)
         skipButton.setTitleColor(UIColor.white, for: .normal)
-        skipButton.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
+        skipButton.frame = CGRect(x: screenWidth*0.789, y: screenHeight*0.061, width: screenWidth*0.144, height: screenHeight*0.026)
         skipButton.clipsToBounds = true
         self.view.addSubview(skipButton)
         

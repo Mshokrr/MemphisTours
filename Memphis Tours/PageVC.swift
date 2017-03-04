@@ -80,7 +80,17 @@ extension UIFont {
     
 }
 
+// helper for getting the screen dimensions
+
+extension CGRect {
+    var wh: (w: CGFloat, h: CGFloat) {
+        return (size.width, size.height)
+    }
+}
+
 class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    let (screenWidth, screenHeight) = UIScreen.main.applicationFrame.wh
     
     lazy var VCArr: [UIViewController] = {
         return [self.VCInstance(name: "FirstVC"),
@@ -107,7 +117,7 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
         nameLabel.text = "MEMPHIS"
         nameLabel.textColor = UIColor.white
         nameLabel.font = UIFont.miTextStyle4Font()
-        nameLabel.frame = CGRect(x: 39.5, y: 32, width: 163, height: 29.5)
+        nameLabel.frame = CGRect(x: screenWidth*0.1, y: screenHeight*0.047, width: screenWidth*0.43, height: screenHeight*0.079)
         nameLabel.clipsToBounds = true
         self.view.addSubview(nameLabel)
         
@@ -115,7 +125,7 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
         nameLabel2.text = "TOURS"
         nameLabel2.textColor = UIColor.white
         nameLabel2.font = UIFont.miTextStyle5Font()
-        nameLabel2.frame = CGRect(x: 39.5, y: 61.5, width: 163, height: 29.5)
+        nameLabel2.frame = CGRect(x: screenWidth*0.1, y: screenHeight*0.096, width: screenWidth*0.43, height: screenHeight*0.079)
         nameLabel2.clipsToBounds = true
         self.view.addSubview(nameLabel2)
         
@@ -124,7 +134,7 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
         let registerButton = UIButton(type: .custom)
         registerButton.setTitle("REGISTER", for: .normal)
         registerButton.titleLabel?.font = UIFont.miTextStyle2Font()
-        registerButton.frame = CGRect(x: 0, y: 608, width: 187.5, height: 59)
+        registerButton.frame = CGRect(x: 0, y: screenHeight*0.94, width: screenWidth/2, height: screenHeight*0.091)
         registerButton.clipsToBounds = true
         registerButton.backgroundColor = UIColor.miBlueberryTwo
         registerButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -134,7 +144,7 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
         let loginButton = UIButton(type: .custom)
         loginButton.setTitle("LOGIN", for: .normal)
         loginButton.titleLabel!.font = UIFont.miTextStyle2Font()
-        loginButton.frame = CGRect(x: 187.5, y: 608, width: 187.5, height: 59)
+        loginButton.frame = CGRect(x: screenWidth/2, y: screenHeight*0.94, width: screenWidth/2, height: screenHeight*0.091)
         loginButton.clipsToBounds = true
         loginButton.backgroundColor = UIColor.miBlueberryTwo
         loginButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -146,7 +156,7 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
         let skipButton = UIButton(type: .custom)
         skipButton.setTitle("SKIP", for: .normal)
         skipButton.setTitleColor(UIColor.white, for: .normal)
-        skipButton.frame = CGRect(x: 296, y: 40.5, width: 54, height: 17.5)
+        skipButton.frame = CGRect(x: screenWidth*0.789, y: screenHeight*0.061, width: screenWidth*0.144, height: screenHeight*0.026)
         skipButton.clipsToBounds = true
         self.view.addSubview(skipButton)
     }
@@ -172,7 +182,7 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
             }
             else if view is UIPageControl {
                 view.backgroundColor = UIColor.clear
-                view.frame.origin.y -= 95
+                view.frame.origin.y -= screenHeight*0.147
             }
         }
     }

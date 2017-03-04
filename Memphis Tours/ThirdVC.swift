@@ -9,6 +9,8 @@
 import UIKit
 
 class ThirdVC: UIViewController {
+    
+    let (screenWidth, screenHeight) = UIScreen.main.applicationFrame.wh
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,7 @@ class ThirdVC: UIViewController {
         let customStringLabel = UILabel()
         customStringLabel.attributedText = customMutableString
           // Had to change width for text wrapping and y to fit text
-        customStringLabel.frame = CGRect(x: 39, y: 282.5, width: 150, height: 110)
+        customStringLabel.frame = CGRect(x: screenWidth*0.105, y: screenHeight*0.424, width: 150, height: 110)
         customStringLabel.clipsToBounds = true
         customStringLabel.lineBreakMode = .byWordWrapping
         customStringLabel.numberOfLines = 0
@@ -39,7 +41,7 @@ class ThirdVC: UIViewController {
         
         let descriptionLabel = UILabel()
         descriptionLabel.text = "Discovr learns what you like and guides you to find things all over the world. Log in to start exploring."
-        descriptionLabel.frame = CGRect(x: 39.5, y: 403, width: 226.5, height: 54)
+        descriptionLabel.frame = CGRect(x: screenWidth*0.105, y: screenHeight*0.625, width: 226.5, height: 54)
         descriptionLabel.clipsToBounds = true
         descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.numberOfLines = 0
