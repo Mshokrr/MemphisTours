@@ -82,11 +82,6 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
         self.view.addSubview(skipButton)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // Action for Location Permission Button .. Still not working
     

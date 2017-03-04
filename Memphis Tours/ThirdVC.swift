@@ -38,7 +38,7 @@ class ThirdVC: UIViewController {
         self.view.addSubview(customStringLabel)
         
         let descriptionLabel = UILabel()
-        descriptionLabel.text = "Discovr learn what you like and guides you to find things all over the world. Log in to start exploring."
+        descriptionLabel.text = "Discovr learns what you like and guides you to find things all over the world. Log in to start exploring."
         descriptionLabel.frame = CGRect(x: 39.5, y: 403, width: 226.5, height: 54)
         descriptionLabel.clipsToBounds = true
         descriptionLabel.lineBreakMode = .byWordWrapping

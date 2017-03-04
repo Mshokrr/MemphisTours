@@ -282,6 +282,7 @@
 				TargetAttributes = {
 					2F41177F1E66237700F1FCC6 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7GSBB3J8J6;
 						ProvisioningStyle = Automatic;
 					};
 					2F4117931E66237700F1FCC6 = {
@@ -528,7 +529,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7GSBB3J8J6;
 				INFOPLIST_FILE = "Memphis Tours/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shokr.Memphis-Tours";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,7 +543,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7GSBB3J8J6;
 				INFOPLIST_FILE = "Memphis Tours/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shokr.Memphis-Tours";
 				PRODUCT_NAME = "$(TARGET_NAME)";
