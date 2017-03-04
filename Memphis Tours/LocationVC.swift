@@ -21,10 +21,10 @@ class LocationVC: UIViewController, CLLocationManagerDelegate{
         
         self.view.backgroundColor = UIColor.black
         
-        let backgroundImg = UIImage(named: "worldMapBg.jpg")
-        let backgroundImgView = UIImageView(image: backgroundImg)
-        backgroundImgView.alpha = 0.5
-        self.view.addSubview(backgroundImgView)
+//        let backgroundImg = UIImage(named: "worldMapBg.jpg")
+//        let backgroundImgView = UIImageView(image: backgroundImg)
+//        backgroundImgView.alpha = 0.5
+//        self.view.addSubview(backgroundImgView)
         
         // World Map
         

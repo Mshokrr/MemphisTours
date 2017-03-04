@@ -13,7 +13,7 @@ class ThirdVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg3.jpg")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg3.jpg")!)
         
         var customString = "The world in your pocket"
         var customMutableString = NSMutableAttributedString()

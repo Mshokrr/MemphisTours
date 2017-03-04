@@ -13,7 +13,7 @@ class FirstVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg1.jpg")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg1.jpg")!)
         
         var customString = "Find incredible places you will love"
         var customMutableString = NSMutableAttributedString()

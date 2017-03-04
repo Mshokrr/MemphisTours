@@ -28,11 +28,22 @@
                     <view key="view" contentMode="scaleToFill" id="cKi-jC-m6D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="8WL-90-bhu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8WL-90-bhu" firstAttribute="leading" secondItem="cKi-jC-m6D" secondAttribute="leading" id="1V9-4v-jFR"/>
+                            <constraint firstItem="2A3-E1-Tlv" firstAttribute="top" secondItem="8WL-90-bhu" secondAttribute="bottom" id="7YI-oU-OkO"/>
+                            <constraint firstItem="8WL-90-bhu" firstAttribute="top" secondItem="cKi-jC-m6D" secondAttribute="top" id="M50-3C-WbV"/>
+                            <constraint firstAttribute="trailing" secondItem="8WL-90-bhu" secondAttribute="trailing" id="oA9-ba-bBx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3s-I2-QD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="-567"/>
+            <point key="canvasLocation" x="173.59999999999999" y="-567.16641679160421"/>
         </scene>
         <!--SecondVC-->
         <scene sceneID="ep2-il-4nR">
@@ -45,6 +56,17 @@
                     <view key="view" contentMode="scaleToFill" id="pTb-nv-3PX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="rAO-MW-ehe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rAO-MW-ehe" firstAttribute="top" secondItem="pTb-nv-3PX" secondAttribute="top" id="CJy-RW-bX2"/>
+                            <constraint firstAttribute="trailing" secondItem="rAO-MW-ehe" secondAttribute="trailing" id="Vc2-Ib-x6Z"/>
+                            <constraint firstItem="rAO-MW-ehe" firstAttribute="leading" secondItem="pTb-nv-3PX" secondAttribute="leading" id="edP-Kd-ErA"/>
+                            <constraint firstItem="dUh-aB-uVD" firstAttribute="top" secondItem="rAO-MW-ehe" secondAttribute="bottom" id="vDY-Oh-Mq4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4X-bO-g5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,11 +84,22 @@
                     <view key="view" contentMode="scaleToFill" id="R0s-fV-Krp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="bSF-A7-GDF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bSF-A7-GDF" secondAttribute="trailing" id="4oo-8U-5Ff"/>
+                            <constraint firstItem="bSF-A7-GDF" firstAttribute="top" secondItem="R0s-fV-Krp" secondAttribute="top" id="5DZ-5T-cKb"/>
+                            <constraint firstItem="bSF-A7-GDF" firstAttribute="leading" secondItem="R0s-fV-Krp" secondAttribute="leading" id="kgn-0B-Cib"/>
+                            <constraint firstItem="Oyz-8q-KYl" firstAttribute="top" secondItem="bSF-A7-GDF" secondAttribute="bottom" id="r2L-6p-bLT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1s-lu-Qho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="843"/>
+            <point key="canvasLocation" x="173.59999999999999" y="842.42878560719646"/>
         </scene>
         <!--LocationVC-->
         <scene sceneID="cPV-Pk-6St">
@@ -79,12 +112,29 @@
                     <view key="view" contentMode="scaleToFill" id="X67-4A-jgS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldMapBg" translatesAutoresizingMaskIntoConstraints="NO" id="dao-Nj-xih">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dao-Nj-xih" firstAttribute="leading" secondItem="X67-4A-jgS" secondAttribute="leading" id="Be5-bt-szL"/>
+                            <constraint firstItem="dao-Nj-xih" firstAttribute="top" secondItem="X67-4A-jgS" secondAttribute="top" id="gSC-bp-fZ1"/>
+                            <constraint firstAttribute="trailing" secondItem="dao-Nj-xih" secondAttribute="trailing" id="ggk-Jp-h27"/>
+                            <constraint firstItem="ggZ-QD-Lgd" firstAttribute="top" secondItem="dao-Nj-xih" secondAttribute="bottom" id="wS1-dh-6uC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Seh-WC-Ag7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970" y="139"/>
+            <point key="canvasLocation" x="968.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg1" width="375" height="667"/>
+        <image name="bg2" width="375" height="667"/>
+        <image name="bg3" width="375" height="667"/>
+        <image name="worldMapBg" width="375" height="667"/>
+    </resources>
 </document>

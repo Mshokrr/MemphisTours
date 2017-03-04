@@ -13,7 +13,7 @@ class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg2.jpg")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg2.jpg")!)
         
         var customString = "Your favorite places"
         var customMutableString = NSMutableAttributedString()
